@@ -7,119 +7,121 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: #0d0d23;
-    color: #f5f5f5;
+    background-color: #0a0a1e;
+    color: #f0f0f0;
     text-align: center;
     padding: 20px;
-    background-image: url('https://example.com/space-pizza-background.jpg'); /* Replace with a valid image link */
-    background-size: cover;
-    background-position: center;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
 }
 
 h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 4rem;
-    color: #00ffe7;
-    text-shadow: 0 0 10px #00ffe7;
+    font-size: 2.5rem; /* Smaller font for mobile */
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
 }
 
-p {
-    font-size: 1.5rem;
-    color: #fff;
+#cart {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffcc00;
 }
 
+/* Menu Section */
 #menu {
-    margin: 40px 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 10px;
 }
 
 h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Adjusted for mobile */
     color: #ff00ff;
     text-shadow: 0 0 10px #ff00ff;
-    margin-bottom: 20px;
 }
 
 ul {
     list-style-type: none;
-    font-size: 1.5rem;
-    line-height: 2;
-    text-align: left;
+    font-size: 1.2rem; /* Adjusted for mobile */
+    line-height: 1.8;
     color: #00d4ff;
 }
 
 li {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    text-shadow: 0 0 5px #00d4ff;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allows text wrapping on small screens */
+    box-shadow: 0 0 10px #00d4ff;
 }
 
 .price {
-    color: #ffcc00;
-    font-weight: bold;
+    font-size: 1rem; /* Adjusted for mobile */
 }
 
-#order {
-    margin: 40px 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-label {
-    font-family: 'Orbitron', sans-serif;
-    color: #ff00ff;
-    text-shadow: 0 0 10px #ff00ff;
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
-
-select {
-    padding: 10px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 20px;
-    background-color: #00d4ff;
-    color: #000;
-}
-
-button {
+/* Button Styling */
+.add-to-cart, #orderButton {
     background-color: #ff00ff;
     color: #000;
-    padding: 15px 40px;
-    font-size: 1.5rem;
+    padding: 10px;
+    font-size: 1rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Orbitron', sans-serif;
     text-shadow: 0 0 10px #ff00ff;
+    margin-top: 10px; /* Add space between buttons and text */
 }
 
-button:hover {
+.add-to-cart:hover, #orderButton:hover {
     background-color: #00ffe7;
     color: #000;
-    text-shadow: 0 0 15px #00ffe7;
 }
 
+/* Footer Section */
 footer {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 1rem;
     color: #888;
     text-shadow: 0 0 5px #888;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        font-size: 1.1rem;
+    }
+
+    .add-to-cart, #orderButton {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 8px 15px; /* Adjust padding */
+    }
+
+    li {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
 }
