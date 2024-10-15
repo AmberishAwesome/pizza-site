@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amba's Futuristic Pizza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Amba's Futuristic Pizza</h1>
+        <p>Experience the taste of the future!</p>
+        <div id="cart">🛒 Cart: <span id="cart-count">0</span> pizzas</div> <!-- Cart Display -->
+    </header>
+
+    <section id="menu">
+        <h2>Our Pizza Menu</h2>
+        <ul>
+            <li>
+                🌌 Galactic Margherita - A timeless classic with a cosmic twist.
+                <span class="price">12 GalaxyCoins</span>
+                <button class="add-to-cart" onclick="addToCart('Galactic Margherita')">Add to Cart</button>
+            </li>
+            <li>
+                ⚛️ Quantum Pepperoni - Pepperoni with a quantum kick!
+                <span class="price">15 GalaxyCoins</span>
+                <button class="add-to-cart" onclick="addToCart('Quantum Pepperoni')">Add to Cart</button>
+            </li>
+            <li>
+                🌱 Neon Veggie - Bright, colorful veggies from the future.
+                <span class="price">14 GalaxyCoins</span>
+                <button class="add-to-cart" onclick="addToCart('Neon Veggie')">Add to Cart</button>
+            </li>
+            <li>
+                🍗 BBQ Astro Chicken - Space-grilled chicken with BBQ sauce.
+                <span class="price">17 GalaxyCoins</span>
+                <button class="add-to-cart" onclick="addToCart('BBQ Astro Chicken')">Add to Cart</button>
+            </li>
+            <li>
+                🌠 Stellar Hawaiian - Pineapple and ham, out of this world.
+                <span class="price">16 GalaxyCoins</span>
+                <button class="add-to-cart" onclick="addToCart('Stellar Hawaiian')">Add to Cart</button>
+            </li>
+        </ul>
+    </section>
+
+    <section id="order">
+        <h2>Order Now</h2>
+        <p>Select your payment method and place your order:</p>
+        <label for="payment-method">Choose payment method:</label>
+        <select id="payment-method">
+            <option value="galaxy-coins">GalaxyCoins</option>
+            <option value="cryptopay">CryptoPay</option>
+            <option value="earth-credit">Earth Credit</option>
+        </select>
+        <button id="orderButton">Order Pizza</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Amba's Futuristic Pizza. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Cart Functionality -->
+    <script>
+        let cartCount = 0;
+
+        function addToCart(pizzaName) {
+            // Increment the cart count
+            cartCount++;
+            // Update the cart display
+            document.getElementById('cart-count').innerText = cartCount;
+            alert(pizzaName + ' has been added to your cart!');
+        }
+
+        document.getElementById('orderButton').addEventListener('click', function() {
+            const paymentMethod = document.getElementById('payment-method').value;
+            alert('Thank you for your order! Your payment method is ' + paymentMethod + '. Your pizza is on the way! ps... we already know where to delivery it.');
+        });
+    </script>
+</body>
+</html>
